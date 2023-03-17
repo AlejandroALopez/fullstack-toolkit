@@ -1,0 +1,18 @@
+.shape-container {
+    width: 300px;
+    height: 100px;
+    margin-top: 100px;
+    background-color: brown;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+}
+
+.shape-text {
+    font-size: 20px;
+    color: #ffffff;
+}
