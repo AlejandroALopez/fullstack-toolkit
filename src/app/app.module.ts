@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FunctionsPageComponent } from './pages/functions-page/functions-page.component';
 import { NavigationHeaderComponent } from './components/navigation-header/navigation-header.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavigationHeaderComponent } from './components/navigation-header/naviga
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -69,12 +69,11 @@ p, h1 {
 }
 
 .extras-container {
-    width: 45%;
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 
-    background-color: #D9D9D9;
-}
-
-.title {
-    font-size: 4vw;
+    width: 35%;
+    padding: 3em;
 }
