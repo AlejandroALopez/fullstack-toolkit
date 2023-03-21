@@ -7,20 +7,42 @@
     </div>
     <div class="body-container">
         <div class="content-container">
-            <h1>Functions</h1>
-            <div class="languages-container">
-                <div class="language-item">
-                    <img src="assets/images/js-logo.png"/>
-                    <p>JavaScript</p>
-                </div>
-                <div class="language-item">
-                    <img src=""/>
-                    <p>TBD</p>
-                </div>
-                <div class="language-item">
-                    <img src=""/>
-                    <p>TBD</p>
-                </div>
+            <h1>
+                <span 
+                    [ngClass]="{'text-underline': section !== 'languages'}"
+                    (click)="section !== 'languages' && goToLanguages()"
+                >
+                    Functions
+                </span>
+                <span
+                    *ngIf="languageCurrent"
+                    [ngClass]="{'text-underline': section === 'single function'}"
+                    (click)="section === 'single function' && goToFunctions()"
+                >
+                    /{{languageCurrent.name}}
+                </span>
+                <span
+                    *ngIf="functionCurrent"
+                >
+                    /{{functionCurrent.name}}
+                </span>
+            </h1>
+            <div *ngIf="section === 'languages'" class="languages-container">
+                <button 
+                    *ngFor="let lang of languages;" 
+                    (click)="getFunctions(lang)"
+                    class="language-item">
+                    <img src="assets/images/{{lang.logo}}"/>
+                    <p>{{lang.name}}</p>
+                </button>
+            </div>
+            <div *ngIf="section === 'functions'" class="languages-container">
+                <button 
+                    *ngFor="let f of functions;" 
+                    (click)="setFunction(f)"
+                    class="language-item">
+                    <p>{{f.name}}</p>
+                </button>
             </div>
         </div>
         <div class="extras-container">

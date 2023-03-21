@@ -41,8 +41,12 @@ p, h1 {
     padding-left: 2em;
 
     h1 {
-        font-size: 3vw;
+        font-size: 2vw;
     }
+}
+
+.text-underline {
+    text-decoration: underline;
 }
 
 .language-item {
@@ -52,9 +56,10 @@ p, h1 {
 
     height: 16vh;
     width: 45vw;
-    border-radius: 20px;
     padding-left: 3em;
     margin-bottom: 2.5em;
+    border-radius: 20px;
+    border: none;
 
     background-color: #D9D9D9;
 

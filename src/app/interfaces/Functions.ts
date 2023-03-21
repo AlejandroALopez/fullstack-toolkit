@@ -1,11 +1,12 @@
 export interface Language {
     name: string;
-    logo: string;
+    alias: string;
+    logo?: string;
 }
 
 export interface Function {
     name: string;
-    language: string;  // should match Language.name
+    language: string;  // should match Language.alias
     syntax: string;
     description: string;
     input?: string;

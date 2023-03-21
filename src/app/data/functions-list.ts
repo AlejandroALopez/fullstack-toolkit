@@ -2,8 +2,19 @@ import { Language, Function } from '../interfaces/Functions';
 
 export const LANGUAGES: Language[] = [
     {
-        name: 'JS',
-        logo: 'some logo',
+        name: 'Javascript',
+        alias: 'JS',
+        logo: 'js-logo.png',
+    },
+    {
+        name: 'TBD',
+        alias: 'TBD',
+        logo: '',
+    },
+    {
+        name: 'TBD',
+        alias: 'TBD',
+        logo: '',
     },
 ]
 

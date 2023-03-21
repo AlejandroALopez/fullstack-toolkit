@@ -11,9 +11,16 @@ import { LANGUAGES, FUNCTIONS } from '../../data/functions-list';
 })
 export class FunctionsPageComponent {
 
-  languages : Language[] = LANGUAGES;
-  functionsJS : number = 3;
-  totalFunctions : number = this.functionsJS;
+  functions: Function[] = []; // current functions being displayed
+  languages: Language[] = LANGUAGES;
+
+  functionCurrent: Function;
+  languageCurrent: Language;
+
+  section: 'languages' | 'functions' | 'single function' = 'languages';
+
+  functionsJS: number = 3;
+  totalFunctions: number = this.functionsJS;
 
   // Chart config
 
@@ -27,14 +34,31 @@ export class FunctionsPageComponent {
 
   public pieChartOptions: ChartOptions<'pie'> = {
     responsive: true,
-  }; 
-
-  // sorting algorithms
+  };
 
   // get an array of all functions from a given language
-  getFunctions(lang : Language) : Function[] { 
-    return FUNCTIONS.filter((func) => {
-      return func.language === lang.name;
+  getFunctions(lang: Language): void { 
+    this.functions = FUNCTIONS.filter((func) => {
+      return func.language === lang.alias;
     });
+
+    this.section = 'functions';
+    this.languageCurrent = lang;
   };  
+
+  setFunction(f: Function): void {
+    this.section = 'single function';
+    this.functionCurrent = f;
+  }
+
+  goToLanguages(): void {
+    this.section = 'languages';
+    this.languageCurrent = null;
+    this.functionCurrent = null;
+  }
+
+  goToFunctions(): void {
+    this.section = 'functions';
+    this.functionCurrent = null;
+  }
 }
