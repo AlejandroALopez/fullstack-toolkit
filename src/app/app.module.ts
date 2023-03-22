@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FunctionsPageComponent } from './pages/functions-page/functions-page.component';
 import { NavigationHeaderComponent } from './components/navigation-header/navigation-header.component';
 import { NgChartsModule } from 'ng2-charts';
+import { StylesPageComponent } from './pages/styles-page/styles-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NgChartsModule } from 'ng2-charts';
     DashboardComponent,
     FunctionsPageComponent,
     NavigationHeaderComponent,
+    StylesPageComponent,
   ],
   imports: [
     BrowserModule,
