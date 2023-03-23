@@ -27,3 +27,91 @@ p, h1 {
         width: 80px;
     }
 }
+
+.title-container {
+    margin-left: 2em;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+
+    height: 75vh;
+}
+
+.component-container {
+    width: 40vw;
+    height: 40vh;
+    margin: 3em;
+}
+
+.custom-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40vw;
+    height: 60vh;
+    background-color: rgb(27, 90, 192);
+
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.custom-text {
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+}
+
+.content-container {
+    width: 50vw;
+    height: 70vh;
+}
+
+.styles-container {
+    height: 70%;
+}
+
+.code-container {
+    height: 25%;
+    border-radius: 20px;
+    padding: 1em;
+
+    background-color: black;
+
+    p {
+        color: white;
+    }
+}
+
+.styles-subsection-title {
+    font-size: 1.5vw;
+}
+
+.styles-subsection-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 5vw;
+        max-width: 15vw;
+        height: 5vh;
+        
+        border-radius: 20px;
+        border-color: black;
+        border-style:solid;
+
+        p {
+            text-align: center;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+}
